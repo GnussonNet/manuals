@@ -1,6 +1,6 @@
 [![MIT](https://img.shields.io/packagist/l/doctrine/orm.svg)](https://github.com/GnussonNet/manuals/blob/master/LICENSE) 
 ![OS](https://img.shields.io/badge/Tested%20On-Linux%20-brightgreen.svg)
-![Donwloads]https://img.shields.io/github/downloads/GnussonNet/manuals/total.svg
+[![Donwloads]https://img.shields.io/github/downloads/GnussonNet/manuals/total.svg]
 ### manuals
 A simple script that contains installation guides and commands for Kali Linux Tools!
 
