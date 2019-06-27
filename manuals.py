@@ -22,14 +22,18 @@ color = {'white':'\33[37m', 'bg':'\33[101m', 'blink' :'\33[5m', 'bold' :'\033[;1
 
 #Menu
 menu = '''
- [1] ✔ catt			 	Chromecast hijacking
- [2] ✔ twint			 	Twitter scraper
+ [1] ✔ catt				Chromecast hijacking
+ [2] ✔ twint				Twitter scraper
  [3] ✔ userrecon			Account lookup
  [4] ✔ cupp				Personalized wordlist
- [0] ✔ Quit                       	Quit          
+ [5] ✔ HiddenEye			Social medias phishing
+ [6] ✔ John				Zip password cracker
+ [7] ✔ zip				Create zip files
+ [9] ✔ Navigation			Must know commands	
+ [0] ✔ Quit				Quit
 
-                                                         
- '''
+
+'''
 
 # Logo
 logo = '''
@@ -40,7 +44,7 @@ logo = '''
 ██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
 
-  ======================== By Gnusse =======================                                                                                   
+  ======================== By Gnusse =======================
 '''
 
 
@@ -239,7 +243,88 @@ def menu4():
     print
     print	
     choice = raw_input(color['red'] + "Press enter to continue..." + color['off'])
-    exec_menu(choice)	
+    exec_menu(choice)
+
+
+# Menu 5
+def menu5():
+    os.system('clear')
+    user = os.getuid()
+    if user != 0:
+	print color['blue'] + "  It's recomended to use this script with root privileges!"
+    print color['red'] + logo + color['off']
+    print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
+    print color['cyan'] + "git clone https://github.com/DarkSecDevelopers/HiddenEye.git" + color['off']
+    print color['cyan'] + "cd HiddenEye" + color['off']
+    print color['cyan'] + "sudo pip3 install -r requirements.txt" + color['off']
+    print color['cyan'] + "chmod +x HiddenEye.py" + color['off']
+    print
+    print
+    print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['cyan'] + "./HiddenEye.py" + color['off']
+    print
+    print	
+    choice = raw_input(color['red'] + "Press enter to continue..." + color['off'])
+    exec_menu(choice)
+
+
+# Menu 6
+def menu6():
+    os.system('clear')
+    user = os.getuid()
+    if user != 0:
+	print color['blue'] + "  It's recomended to use this script with root privileges!"
+    print color['red'] + logo + color['off']
+    print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
+    print color['cyan'] + "Preinstalled on Kali Linux" + color['off']
+    print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['cyan'] + "zip2john 'name'.zip > 'hash'.txt" + color['off']
+    print color['cyan'] + "john --format=zip 'hash'.txt > 'password'.txt" + color['off']
+    print
+    print	
+    choice = raw_input(color['red'] + "Press enter to continue..." + color['off'])
+    exec_menu(choice)
+
+
+# Menu 7
+def menu7():
+    os.system('clear')
+    user = os.getuid()
+    if user != 0:
+	print color['blue'] + "  It's recomended to use this script with root privileges!"
+    print color['red'] + logo + color['off']
+    print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
+    print color['cyan'] + "Preinstalled on Kali Linux" + color['off']
+    print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['cyan'] + "zip -r 'name'.zip file" + color['off']
+    print color['cyan'] + "zip --password '1234' 'name'.zip 'file.txt'" + color['off']
+    print
+    print	
+    choice = raw_input(color['red'] + "Press enter to continue..." + color['off'])
+    exec_menu(choice)
+
+
+# Menu 9
+def menu9():
+    os.system('clear')
+    user = os.getuid()
+    if user != 0:
+	print color['blue'] + "  It's recomended to use this script with root privileges!"
+    print color['red'] + logo + color['off']
+    print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['cyan'] + "leafpad .bashrc" + color['off']
+    print color['cyan'] + "su" + color['off']
+    print color['cyan'] + "rm -R folder/" + color['off']
+    print color['cyan'] + "mkdir folder" + color['off']
+    print color['cyan'] + "ls" + color['off']
+    print color['cyan'] + "pwd" + color['off']
+    print color['cyan'] + "xdg-open ." + color['off']
+    print color['cyan'] + "cat > 'name'.txt" + color['off']
+    print
+    print	
+    choice = raw_input(color['red'] + "Press enter to continue..." + color['off'])
+    exec_menu(choice)
+	
 
  
 # Back to main menu
@@ -261,7 +346,11 @@ menu_actions = {
     '2': menu2,
     '3': menu3,
     '4': menu4,
-    '9': back,
+    '5': menu5,
+    '6': menu6,
+    '7': menu7,
+    '9': menu9,
+#    '9': back,
     '0': exit,
 }
  
@@ -278,13 +367,23 @@ if __name__ == "__main__":
         parser = argparse.ArgumentParser()
         parser.add_argument("-a", "--all", help="List all manuals in categories",
                             action="store_true")
-        parser.add_argument("-c", "--catt", help="List manuals for catt script",
+        parser.add_argument("-ca", "--catt", help="List manuals for catt script",
                         action="store_true")
-        parser.add_argument("-t", "--twint", help="List manuals for twint script",
+        parser.add_argument("-tw", "--twint", help="List manuals for twint script",
                             action="store_true")
-        parser.add_argument("-u", "--userrecon", help="List manuals for userrecon script",
+        parser.add_argument("-us", "--userrecon", help="List manuals for userrecon script",
                             action="store_true")
-        parser.add_argument("-v", "--version", help="Display current version of manuals",
+        parser.add_argument("-cu", "--cupp", help="List manuals for cupp script",
+                            action="store_true")
+        parser.add_argument("-he", "--hiddeneye", help="List manuals for HiddenEye script",
+                            action="store_true")
+        parser.add_argument("-jo", "--john", help="List manuals for john script",
+                            action="store_true")
+        parser.add_argument("-zi", "--zip", help="List manuals for basic zip archives",
+                            action="store_true")
+        parser.add_argument("-nav", "--navigation", help="List manuals for must known navigation commands",
+                            action="store_true")
+        parser.add_argument("-ve", "--version", help="Display current version of manuals",
                             action="store_true")
         parser.add_argument("-up", "--update", help="Search and update to the newest version",
                             action="store_true")
@@ -297,6 +396,16 @@ if __name__ == "__main__":
 	    menu2()
         elif args.userrecon:
 	    menu3()
+        elif args.cupp:
+	    menu4()
+        elif args.hiddeneye:
+	    menu5()
+        elif args.john:
+	    menu6()
+        elif args.zip:
+	    menu7()
+        elif args.navigation:
+	    menu9()
         elif args.version:
 	    os.system('clear')
 	    print color['white'] + color['bg'] + "Current version of manuals by gnusse is: 1.0.0" + color['off']
