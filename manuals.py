@@ -303,11 +303,15 @@ if __name__ == "__main__":
         else:
 	    main_menu()
     else:
-	os.system('clear')
-        print color['white'] + color['bg'] + "Installing 'manuals.py'... Please wait and DO NOT EXIT this script!" + color['off']
-	os.getcwd()
-        os.system("cd updater && bash ./update.sh")
-        exit()
+	user = os.getuid()
+    	if user != 0:
+	    os.system('clear')
+	    print color['white'] + color['bg'] + "You need to run this script with root privileges! Type 'sudo ./manuals.py'" + color['off']
+	    exit()
+	else:
+            print color['white'] + color['bg'] + "Installing 'manuals.py'... Please wait and DO NOT EXIT this script!" + color['off']
+            os.system("cd updater && bash ./update.sh")
+            exit()
 
 
 
