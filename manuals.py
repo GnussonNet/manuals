@@ -305,7 +305,8 @@ if __name__ == "__main__":
     else:
 	os.system('clear')
         print color['white'] + color['bg'] + "Installing 'manuals.py'... Please wait and DO NOT EXIT this script!" + color['off']
-        os.system("cd updater && sudo bash ./update.sh")
+	os.getcwd()
+        os.system("cd updater && bash ./update.sh")
         exit()
 
 
