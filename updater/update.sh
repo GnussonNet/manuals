@@ -46,7 +46,7 @@ git clone https://github.com/GnussonNet/manuals.git
 
 clear
 
-cd manuals
+cd manuals/updater
 
 clear
 
