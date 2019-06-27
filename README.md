@@ -20,7 +20,7 @@ In the teminal type: ` su ` and enter your password before installation
 
 ` ./install.sh `
 
-Optinally delete the unassesary manuals folder where you cloned it
+optionally delete the unnecessary manuals folder where you cloned it
 
 ` cd diretory/where/you/cloned ` 
 ` rm -R manuals/ `  
