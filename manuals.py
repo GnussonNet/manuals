@@ -275,7 +275,6 @@ if __name__ == "__main__":
 
     #Check if /usr/share/doc/manuals exists
     if os.path.exists("/usr/share/doc/manuals"):
-        print "Do exist"
         parser = argparse.ArgumentParser()
         parser.add_argument("-a", "--all", help="List all manuals in categories",
                             action="store_true")
@@ -286,6 +285,8 @@ if __name__ == "__main__":
         parser.add_argument("-u", "--userrecon", help="List manuals for userrecon script",
                             action="store_true")
         parser.add_argument("-v", "--version", help="Display current version of manuals",
+                            action="store_true")
+        parser.add_argument("-up", "--update", help="Search and update to the newest version",
                             action="store_true")
         args = parser.parse_args()
         if args.all:
@@ -300,6 +301,16 @@ if __name__ == "__main__":
 	    os.system('clear')
 	    print color['white'] + color['bg'] + "Current version of manuals by gnusse is: BETA 1.0.0" + color['off']
 	    exit()
+        elif args.update:
+	    user = os.getuid()
+    	    if user != 0:
+	        os.system('clear')
+	        print color['white'] + color['bg'] + "You need to run this script with root privileges! Type 'sudo ./manuals.py'" + color['off']
+	        exit()
+	    else:
+                print color['white'] + color['bg'] + "Installing 'manuals.py'... Please wait and DO NOT EXIT this script!" + color['off']
+                os.system('cd /usr/share/doc/manuals/updater && chmod +x update.sh && ./update.sh')
+                exit()
         else:
 	    main_menu()
     else:
@@ -307,7 +318,6 @@ if __name__ == "__main__":
     	if user != 0:
 	    os.system('clear')
 	    print color['white'] + color['bg'] + "You need to run this script with root privileges! Type 'sudo ./manuals.py'" + color['off']
-	    exit()
 	else:
             print color['white'] + color['bg'] + "Installing 'manuals.py'... Please wait and DO NOT EXIT this script!" + color['off']
             os.system("cd updater && chmod +x update.sh && bash ./update.sh")
