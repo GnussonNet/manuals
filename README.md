@@ -2,7 +2,7 @@
 ![OS](https://img.shields.io/badge/Tested%20On-Linux%20-brightgreen.svg)
 ![ISSUES](https://img.shields.io/github/issues-raw/GnussonNet/manuals.svg)
 ![DOWNLOADS](https://img.shields.io/github/downloads/GnussonNet/manuals/total.svg)
-![STAR](https://img.shields.io/github/downloads/GnussonNet/manuals/total.svg)
+![STAR](https://img.shields.io/github/stars/GnussonNet/manuals.svg?style=social)
 ### manuals
 A simple script that contains installation guides and commands for Kali Linux Tools!
 
