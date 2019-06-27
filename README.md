@@ -13,8 +13,11 @@ In the teminal type: ` su ` and enter your password before installation
 
 ### Manuell Installation
 ` git clone https://github.com/GnussonNet/manuals.git`
+
 ` cd manuals/updater `
+
 ` chmod +x install.sh `
+
 ` ./install.sh `
 
 Optinally delete the unassesary manuals folder where you cloned it
