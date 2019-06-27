@@ -5,8 +5,23 @@
 ### manuals
 A simple script that contains installation guides and commands for Kali Linux Tools!
 
-### Installation
+### Auto Installation
+You need to run as root!
+In the teminal type: ` su ` and enter your password before installation
+
 ` git clone https://github.com/GnussonNet/manuals.git && cd manuals/updater && chmod +x install.sh && ./install.sh && cd .. && cd .. && rm -R manuals/ `
+
+### Manuell Installation
+` git clone https://github.com/GnussonNet/manuals.git`
+` cd manuals/updater `
+` chmod +x install.sh `
+` ./install.sh `
+
+Optinally delete the unassesary manuals folder where you cloned it
+
+` cd diretory/where/you/cloned ` 
+` rm -R manuals/ `  
+
 
 ### LICENSE
 
