@@ -6,7 +6,7 @@
 ### manuals
 A simple script that contains installation guides and commands for Kali Linux Tools!
 
-### Auto Installation
+### Quick Installation
 You need to run as root!
 In the teminal type: ` su ` and enter your password before installation
 
