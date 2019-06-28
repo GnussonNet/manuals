@@ -10,43 +10,16 @@
 #python_version  :2.7.6  
 #=======================================================================
  
+
+# ✔ ✘
+
+
 # Import the modules needed to run the script.
 import sys, os, argparse
 
 
-
-
 #Color
 color = {'white':'\33[37m', 'bg':'\33[101m', 'blink' :'\33[5m', 'bold' :'\033[;1m', 'cyan' :'\033[96m', 'red' :'\033[1;31m', 'blue':'\033[1;34m', 'off' : '\033[0;0m'}
-
-
-#Menu
-menu = '''
- [1] ✔ catt				Chromecast hijacking
- [2] ✔ twint				Twitter scraper
- [3] ✔ userrecon			Account lookup
- [4] ✔ cupp				Personalized wordlist
- [5] ✔ HiddenEye			Social medias phishing
- [6] ✔ John				Zip password cracker
- [7] ✔ zip				Create zip files
- [9] ✔ Navigation			Must know commands	
- [0] ✔ Quit				Quit
-
-
-'''
-
-# Logo
-logo = '''
-███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗
-████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝
-██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗
-██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║
-██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
-
-  ======================== By Gnusse =======================
-'''
-
 
  
 # Main definition - constants
@@ -61,10 +34,39 @@ def main_menu():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
-    print color['cyan'] + menu + color['off']
-    choice = raw_input(color['red'] + "Select>: " + color['off'])
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+    #print color['red'] + logo + color['off']
+    #print color['cyan'] + menu + color['off']
+
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┃                                                                ┃"
+    print "┃                                                                ┃"
+    print "┃" + color['cyan'] + " [1] ✔ catt                              Chromecast hijacking   " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [2] ✔ twint                             Twitter scraper        " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [3] ✔ userrecon                         Account lookup         " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [4] ✔ cupp                              Personalized wordlist  " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [5] ✔ HiddenEye                         Social medias phishing " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [6] ✔ John                              Zip password cracker   " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [7] ✔ zip                               Create zip files       " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [9] ✔ Navigation                        Must know commands     " + color['red'] + "┃"
+    print "┃" + color['cyan'] + " [0] ✔ Quit                              Quit                   " + color['red'] + "┃"
+    print "┃                                                                ┃"
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
+    choice = raw_input(color['red'] + "Select>:")
     exec_menu(choice)
  
     return
@@ -88,8 +90,21 @@ def menu1():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "git clone https://github.com/skorokithakis/catt.git" + color['off']
     print color['cyan'] + "cd catt" + color['off']
@@ -120,8 +135,22 @@ def menu2():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "pip3 install --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint" + color['off']
     print
@@ -209,8 +238,22 @@ def menu3():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "git clone https://github.com/thelinuxchoice/userrecon.git" + color['off']
     print color['cyan'] + "cd userrecon" + color['off']
@@ -218,6 +261,7 @@ def menu3():
     print
     print
     print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['blue'] + "Start script:" + color['off']
     print color['cyan'] + "./userrecon.sh" + color['off']
     print
     print	
@@ -230,8 +274,22 @@ def menu4():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "git clone https://github.com/Mebus/cupp.git" + color['off']
     print color['cyan'] + "cd cupp" + color['off']
@@ -239,6 +297,7 @@ def menu4():
     print
     print
     print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['blue'] + "Start script:" + color['off']
     print color['cyan'] + "./cupp.py -i" + color['off']
     print
     print	
@@ -251,8 +310,22 @@ def menu5():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "git clone https://github.com/DarkSecDevelopers/HiddenEye.git" + color['off']
     print color['cyan'] + "cd HiddenEye" + color['off']
@@ -261,6 +334,7 @@ def menu5():
     print
     print
     print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['blue'] + "Start script:" + color['off']
     print color['cyan'] + "./HiddenEye.py" + color['off']
     print
     print	
@@ -273,12 +347,31 @@ def menu6():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "Preinstalled on Kali Linux" + color['off']
+    print
+    print
     print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['blue'] + "Create hash file from zip:" + color['off']
     print color['cyan'] + "zip2john 'name'.zip > 'hash'.txt" + color['off']
+    print
+    print color['blue'] + "Crack the hash with wordlist:" + color['off']
     print color['cyan'] + "john --format=zip 'hash'.txt > 'password'.txt" + color['off']
     print
     print	
@@ -291,13 +384,38 @@ def menu7():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Installation:" + color['off']
     print color['cyan'] + "Preinstalled on Kali Linux" + color['off']
+    print
+    print
     print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['blue'] + "Create zip of file:" + color['off']
     print color['cyan'] + "zip -r 'name'.zip file" + color['off']
+    print
+    print color['blue'] + "Create zip with password:" + color['off']
     print color['cyan'] + "zip --password '1234' 'name'.zip 'file.txt'" + color['off']
+    print
+    print color['blue'] + "Unzip file:" + color['off']
+    print color['cyan'] + "tar xvf filename.zip'" + color['off']
+    print
+    print color['blue'] + "Unzip file:" + color['off']
+    print color['cyan'] + "unzip filename.zip'" + color['off']
     print
     print	
     choice = raw_input(color['red'] + "Press enter to continue..." + color['off'])
@@ -309,16 +427,45 @@ def menu9():
     os.system('clear')
     user = os.getuid()
     if user != 0:
-	print color['blue'] + "  It's recomended to use this script with root privileges!"
-    print color['red'] + logo + color['off']
+	print color['blue'] + "    It's recomended to run this script with root privileges!      " + color['off']
+
+    print color['red'] +"┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓"
+    print "┃                                                                ┃"
+    print color['red'] + "┃ " + color['red'] + "███╗   ███╗ █████╗ ███╗   ██╗██╗   ██╗ █████╗ ██╗     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "████╗ ████║██╔══██╗████╗  ██║██║   ██║██╔══██╗██║     ██╔════╝ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██╔████╔██║███████║██╔██╗ ██║██║   ██║███████║██║     ███████╗ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║╚██╔╝██║██╔══██║██║╚██╗██║██║   ██║██╔══██║██║     ╚════██║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "██║ ╚═╝ ██║██║  ██║██║ ╚████║╚██████╔╝██║  ██║███████╗███████║ ┃"
+    print color['red'] +  "┃ " + color['red'] + "╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝ ┃"
+    print "┃                                                                ┃"
+    print "┃  " + color['red'] + "======================== 𝓫𝔂 𝓰𝓷𝓾𝓼𝓼𝓮 =======================    ┃"# + color['off']
+    print "┃                                                                ┃"
+    print "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛" + color['off']
+
+
     print color['blink'] + color['white'] + color['bg'] + "Commands:" + color['off']
+    print color['blue'] + "Edit terminal launch options:" + color['off']
     print color['cyan'] + "leafpad .bashrc" + color['off']
+    print
+    print color['blue'] + "Login as root:" + color['off']
     print color['cyan'] + "su" + color['off']
+    print
+    print color['blue'] + "Delete folder:" + color['off']
     print color['cyan'] + "rm -R folder/" + color['off']
+    print
+    print color['blue'] + "Create folder:" + color['off']
     print color['cyan'] + "mkdir folder" + color['off']
+    print
+    print color['blue'] + "Show files directory:" + color['off']
     print color['cyan'] + "ls" + color['off']
+    print
+    print color['blue'] + "Show current directory:" + color['off']
     print color['cyan'] + "pwd" + color['off']
+    print
+    print color['blue'] + "Open current directory in files:" + color['off']
     print color['cyan'] + "xdg-open ." + color['off']
+    print
+    print color['blue'] + "Create txt file:" + color['off']
     print color['cyan'] + "cat > 'name'.txt" + color['off']
     print
     print	
