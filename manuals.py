@@ -555,7 +555,7 @@ if __name__ == "__main__":
 	    menu9()
         elif args.version:
 	    os.system('clear')
-	    print color['white'] + color['bg'] + "Current version of manuals by gnusse is: 1.0.0" + color['off']
+	    print color['white'] + color['bg'] + "Current version of manuals by gnusse is: 1.0.1" + color['off']
 	    exit()
         elif args.update:
 	    user = os.getuid()
